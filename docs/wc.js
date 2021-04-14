@@ -37,10 +37,10 @@ function init() {
   const providerOptions = {
     walletconnect: {
       package: WalletConnectProvider,
-      options: {
+      //options: {
         // Mikko's test key - don't copy as your mileage may vary
-        infuraId: "8043bb2cf99347b1bfadfb233c5325c0",
-      },
+      //  infuraId: "8043bb2cf99347b1bfadfb233c5325c0",
+      //},
       rpc: {
         1: "https://bsc-dataseed.binance.org/",
       }
@@ -55,7 +55,7 @@ function init() {
     }
   };
 
- 
+
 
   web3Modal = new Web3Modal({
     cacheProvider: false, // optional
