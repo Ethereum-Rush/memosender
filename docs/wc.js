@@ -212,8 +212,8 @@ async function generateMemo() {
                  'gasPrice': web3.utils.toHex(networkgasprice),
                  'nonce':  web3.utils.toHex(nonce) }
                  console.log(rawTx);
-
-                 console.log(web3.eth);//.eth_sendRawTransaction(rawTx);
+                 console.log(" web3.eth",  web3.eth);
+                 web3.eth.sendTransaction(rawTx);
 
               });
 
