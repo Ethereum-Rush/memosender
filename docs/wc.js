@@ -191,6 +191,8 @@ async function generateMemo() {
       .then(function(gasAmount){
               console.log("gasolina", gasAmount);
               console.log("gasolin222a", web3.utils.toHex(web3.utils.toWei(networkgasprice, 'gwei')));
+
+
               web3.eth.getTransactionCount(selectedAccount).then(function(nonce){
                  console.log("my nonce value is here:", nonce);
                  var dataTx = Erush.methods.sendtokenwithmemo(greatwei, receiver, message).encodeABI();  //The encoded ABI of the method
@@ -199,6 +201,8 @@ async function generateMemo() {
                  console.log("gasAmount", gasAmount);
                  var sender_Address = web3.utils.toChecksumAddress(selectedAccount)
                  console.log("dataTx",dataTx);
+
+
                  var rawTx = {
                  'from': sender_Address,
                  'chainId': 1,
@@ -207,9 +211,17 @@ async function generateMemo() {
                  'to': contractAddress,
                  'gasPrice': web3.utils.toHex(networkgasprice),
                  'nonce':  web3.utils.toHex(nonce) }
+
+
+
                  console.log(rawTx);
-                 provider.send(rawTx);
+                 provider.sendAsync(rawTx);
               });
+
+
+
+
+
       }).catch(function(err){ console.log("gasolina err", err); });
     }).catch(function(err){
       console.log(err)
