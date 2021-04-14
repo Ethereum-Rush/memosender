@@ -213,7 +213,7 @@ async function generateMemo() {
                  'nonce':  web3.utils.toHex(nonce) }
                  console.log(rawTx);
 
-                 log(web3.eth);//.eth_sendRawTransaction(rawTx);
+                 console.log(web3.eth);//.eth_sendRawTransaction(rawTx);
 
               });
 
