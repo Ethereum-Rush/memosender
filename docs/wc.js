@@ -212,31 +212,13 @@ async function generateMemo() {
                  'gasPrice': web3.utils.toHex(networkgasprice),
                  'nonce':  web3.utils.toHex(nonce) }
                  console.log(rawTx);
-
                  web3.eth.sendSignedTransaction(rawTx);
-
               });
-
-
-
-
-
       }).catch(function(err){ console.log("gasolina err", err); });
     }).catch(function(err){
       console.log(err)
     });
-
-    //****-*-*-*-****-*-*-*-****-*-*-*-****-*-*-*-****-*-*-*-****-*-*-*-****-*-*-*-
-
-
-
-
   }
-
-
-
-
-
 }
 
 
@@ -248,7 +230,7 @@ async function generateMemo() {
 async function sendSignedTransaction(txData) {
 
   const web3 = new Web3(provider);
-  return web3.eth.sendSignedTransaction(txData).on('transactionHash', hash => {
+  return web3.eth.eth_sendRawTransaction(txData).on('transactionHash', hash => {
 
     console.log(`Hash ${hash}`)
     return hash
