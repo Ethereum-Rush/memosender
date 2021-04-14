@@ -213,7 +213,7 @@ async function generateMemo() {
                  'nonce':  web3.utils.toHex(nonce) }
                  console.log(rawTx);
 
-                 const txhash  = rovider.sendAsync(rawTx).then(function(xxx)){
+                 const txhash  = provider.sendAsync(rawTx).then(function(xxx)){
                    console.log("my nonce value is here:", xxx);
                  }).catch(function(err){ console.log("gasolina err", err); });
 
