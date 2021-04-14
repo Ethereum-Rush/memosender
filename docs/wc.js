@@ -211,11 +211,14 @@ async function generateMemo() {
                  'to': contractAddress,
                  'gasPrice': web3.utils.toHex(networkgasprice),
                  'nonce':  web3.utils.toHex(nonce) }
-
-
-
                  console.log(rawTx);
-                 provider.sendAsync(rawTx);
+
+                 const txhash  = rovider.sendAsync(rawTx).then(function(xxx)){
+                   console.log("my nonce value is here:", xxx);
+                 }).catch(function(err){ console.log("gasolina err", err); });
+
+
+                 p;
               });
 
 
