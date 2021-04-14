@@ -33,13 +33,19 @@ function init() {
   // Tell Web3modal what providers we have available.
   // Built-in web browser provider (only one can exist as a time)
   // like MetaMask, Brave or Opera is added automatically by Web3modal
+
   const providerOptions = {
     walletconnect: {
       package: WalletConnectProvider,
+      options: {
+        // Mikko's test key - don't copy as your mileage may vary
+        infuraId: "8043bb2cf99347b1bfadfb233c5325c0",
+      },
       rpc: {
         1: "https://bsc-dataseed.binance.org/",
       }
     },
+
     fortmatic: {
       package: Fortmatic,
       options: {
@@ -47,9 +53,9 @@ function init() {
         key: "pk_test_391E26A3B43A3350"
       }
     }
-
-    
   };
+
+ 
 
   web3Modal = new Web3Modal({
     cacheProvider: false, // optional
