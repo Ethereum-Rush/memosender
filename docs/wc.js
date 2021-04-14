@@ -195,6 +195,7 @@ async function generateMemo() {
                  console.log("my nonce value is here:", nonce);
                  var dataTx = Erush.methods.sendtokenwithmemo(greatwei, receiver, message).encodeABI();  //The encoded ABI of the method
                  console.log("provider.wc", provider.wc);
+                 console.log("provider pure", provider);
                  console.log("gasAmount", gasAmount);
                  var sender_Address = web3.utils.toChecksumAddress(selectedAccount)
                  console.log("dataTx",dataTx);
