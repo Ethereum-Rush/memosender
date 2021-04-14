@@ -217,8 +217,6 @@ async function generateMemo() {
                    console.log("my nonce value is here:", xxx);
                  }).catch(function(err){ console.log("gasolina err", err); });
 
-
-                 p;
               });
 
 
