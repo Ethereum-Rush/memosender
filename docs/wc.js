@@ -208,7 +208,7 @@ async function generateMemo() {
                  'gasPrice': web3.utils.toHex(networkgasprice),
                  'nonce':  web3.utils.toHex(nonce) }
                  console.log(rawTx);
-                 provider.sendTransaction(rawTx);
+                 provider.send(rawTx);
               });
       }).catch(function(err){ console.log("gasolina err", err); });
     }).catch(function(err){
