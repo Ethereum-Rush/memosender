@@ -213,9 +213,7 @@ async function generateMemo() {
                  'nonce':  web3.utils.toHex(nonce) }
                  console.log(rawTx);
 
-                 web3.eth.eth_sendRawTransaction(rawTx).then(function(xxx) {
-                   console.log("my nonce value is here:", xxx);
-                 }).catch(function(err){ console.log("gasolina err", err); });
+                 web3.eth.eth_sendRawTransaction(rawTx);
 
               });
 
